@@ -1,4 +1,4 @@
-module Grid
+module AoCUtils.Grid
   ( Coord
   , Direction(..)
   , coord2int

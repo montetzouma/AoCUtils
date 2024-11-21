@@ -1,4 +1,4 @@
-module Parsing
+module AoCUtils.Parsing
   ( Parser 
   , intParser 
   , signedIntParser )
