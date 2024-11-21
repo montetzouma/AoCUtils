@@ -1,0 +1,41 @@
+name      : AoCUtils
+version   : 0.1.0.0
+github    : "montetzouma/AoCUtils"
+license   : BSD-3-Clause
+author    : "George Illambas"
+maintainer: "gillambas@gmail.com"
+copyright : "2024 George Illambas"
+
+extra-source-files:
+- README.md
+- CHANGELOG.md
+
+# Metadata used when publishing your package
+ synopsis: Data types and functions commonly used in Advent of Code puzzles.
+ category: Programming puzzles
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/montetzouma/AoCUtils#readme>
+
+default-extensions:
+- TupleSections
+
+dependencies:
+- base >= 4.7 && < 5
+- megaparsec
+
+ghc-options:
+- -Wall
+- -Wcompat
+- -Widentities
+- -Wincomplete-record-updates
+- -Wincomplete-uni-patterns
+- -Wmissing-export-lists
+- -Wmissing-home-modules
+- -Wpartial-fields
+- -Wredundant-constraints
+
+library:
+  source-dirs: src
