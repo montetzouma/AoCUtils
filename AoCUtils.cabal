@@ -29,6 +29,7 @@ library
   exposed-modules:
       AoCUtils.Grid
       AoCUtils.Parsing
+      AoCUtils.SolutionPrinter
   other-modules:
       Paths_AoCUtils
   autogen-modules:
