@@ -1,6 +1,7 @@
 module AoCUtils.Grid
   ( Coord
   , Direction(..)
+  , Grid
   , coord2int
   , countColumns
   , countRows
@@ -11,6 +12,9 @@ module AoCUtils.Grid
 where
 
 import qualified Data.List as L
+
+
+type Grid a = [[a]]
 
 
 type Coord = (Int, Int)
