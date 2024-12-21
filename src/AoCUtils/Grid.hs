@@ -8,10 +8,12 @@ module AoCUtils.Grid
   , findIndicesLists
   , findNeighbours
   , getElem
-  , isInBounds )
+  , isInBounds
+  , visualiseGrid )
 where
 
-import qualified Data.List as L
+import qualified Data.List       as L
+import qualified Data.List.Extra as LE
 
 
 type Grid a = [[a]]
@@ -80,3 +82,14 @@ getElem grid (x,y) = (grid !! y) !! x
 
 coord2int :: Int -> Coord -> Int
 coord2int nCols (x,y) = y * nCols + x
+
+
+visualiseGrid :: Int -> Int -> (Coord -> Char) -> String
+visualiseGrid nRows nCols tileVisualiser = grid'
+  where
+    -- Important to have x and y this way around otherwise we'll need to transpose the grid
+    grid :: String
+    grid = [ tileVisualiser (x,y) | y<-[0..(nRows-1)], x<-[0..(nCols-1)] ]
+
+    grid' :: String
+    grid' = unlines $ LE.chunksOf nCols grid  
